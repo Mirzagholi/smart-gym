@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # smart-gym
 =======
 # Create Nx workspace and athlete project 
@@ -92,6 +91,15 @@ sample for athlete
 nx g @nx/react:setup-tailwind --project=athlete
 pnpm add -D tailwindcss@latest postcss@latest autoprefixer@latest
 
+# Add project to github
+
+git init
+git checkout -b develop
+git add .
+git commit -m "Add project files on develop branch"
+git remote add origin https://github.com/Mirzagholi/smart-gym.git
+git push --set-upstream origin develop
+
 
 
 
@@ -168,13 +176,4 @@ It will show tasks that you can run with Nx.
 - [Follow us on Twitter](https://twitter.com/nxdevtools)
 
 
-# Add project to github
 
-git init
-git checkout -b develop
-git add .
-git commit -m "Add project files on develop branch"
-git remote add origin https://github.com/Mirzagholi/smart-gym.git
-git push --set-upstream origin develop
-*git pull origin develop --rebase
->>>>>>> 748e24f (Add project files on develop branch)
