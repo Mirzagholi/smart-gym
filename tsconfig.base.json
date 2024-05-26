@@ -1,0 +1,39 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@smart-gym/athlete/data-access/auth": [
+        "libs/athlete/data-access/auth/src/index.ts"
+      ],
+      "@smart-gym/athlete/data-access/home": [
+        "libs/athlete/data-access/home/src/index.ts"
+      ],
+      "@smart-gym/athlete/feature/auth": [
+        "libs/athlete/feature/auth/src/index.ts"
+      ],
+      "@smart-gym/athlete/feature/entries": [
+        "libs/athlete/feature/entries/src/index.ts"
+      ],
+      "@smart-gym/athlete/feature/home": [
+        "libs/athlete/feature/home/src/index.ts"
+      ],
+      "@smart-gym/athlete/shared/theme": [
+        "libs/athlete/shared/theme/src/*"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

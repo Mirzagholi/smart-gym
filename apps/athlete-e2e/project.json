@@ -1,0 +1,9 @@
+{
+  "name": "athlete-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/athlete-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["athlete"],
+  "// targets": "to see all targets run: nx show project athlete-e2e --web",
+  "targets": {}
+}
