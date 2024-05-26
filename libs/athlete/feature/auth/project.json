@@ -3,7 +3,7 @@
   "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/athlete/feature/auth/src",
   "projectType": "library",
-  "tags": [],
+  "tags": ["scope:athlete type:feature platform:mobile"],
   "// targets": "to see all targets run: nx show project athlete-feature-auth --web",
   "targets": {}
 }

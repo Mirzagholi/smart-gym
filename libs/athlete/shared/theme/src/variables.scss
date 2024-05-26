@@ -1,0 +1,27 @@
+@import './base-variables.scss';
+
+:root {
+    --background-color: #{$background-color-light};
+    --foreground-color: #{$foreground-color-light};
+    --title-color: #{$title-color-light};
+    --title-secondary-color: #{$title-secondary-color-light};
+    --background-secondary-color: #{$background-secondary-color-light};
+    --foreground-secondary-color: #{$foreground-secondary-color-light};
+    --text-color: #{$text-color-light};
+    --text-secondary-color: #{$text-secondary-color-light};
+    --text-third-color: #{$text-third-color-light};
+    --border-radius: #{$border-radius};
+    --spacing-unit: #{$spacing-unit};
+}
+
+[data-theme='dark'] {
+    --background-color: #{$background-color-dark};
+    --foreground-color: #{$foreground-color-dark};
+    --title-color: #{$title-color-dark};
+    --title-secondary-color: #{$title-secondary-color-dark};
+    --background-secondary-color: #{$background-secondary-color-dark};
+    --foreground-secondary-color: #{$foreground-secondary-color-dark};
+    --text-color: #{$text-color-dark};
+    --text-secondary-color: #{$text-secondary-color-dark};
+    --text-third-color: #{$text-third-color-dark};
+}

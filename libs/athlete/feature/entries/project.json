@@ -1,0 +1,9 @@
+{
+  "name": "athlete-feature-entries",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/athlete/feature/entries/src",
+  "projectType": "library",
+  "tags": ["scope:athlete type:feature platform:mobile"],
+  "// targets": "to see all targets run: nx show project athlete-feature-entries --web",
+  "targets": {}
+}

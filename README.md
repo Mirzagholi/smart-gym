@@ -69,16 +69,11 @@ nx g @nx/react:setup-tailwind --project=athlete
 
 ## Create new library
 sample auth feature library for athlete:
-nx g @nx/react:library auth --directory=libs/athlete/feature --unitTestRunner=vitest --bundler=none scope:athlete,type:feature,platform:mobile
+nx g @nx/react:library auth --directory=libs/athlete/feature --unitTestRunner=vitest --bundler=none --tags=scope:athlete,type:feature,platform:mobile
 
-sample auth data-access library for athlete:
-nx g @nx/react:library home --directory=libs/athlete/data-access --unitTestRunner=vitest --bundler=none scope:athlete,type:data-access,platform:mobile
 
-sample auth feature library for gym:
-nx g @nx/react:library auth --directory=libs/gym/feature --unitTestRunner=vitest --bundler=none scope:gym,type:feature,platform:web
-
-sample auth feature library for admin
-nx g @nx/react:library auth --directory=libs/admin/feature --unitTestRunner=vitest --bundler=none scope:admin,type:feature,platform:web
+sample home data-access library for athlete:
+nx g @nx/react:library home --directory=libs/athlete/data-access --unitTestRunner=vitest --bundler=none --tags=scope:athlete,type:data-access,platform:mobile
 
 ## remove project or library
 nx g @nx/workspace:remove [lib-name] --forceRemove    

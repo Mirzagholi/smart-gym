@@ -1,0 +1,9 @@
+{
+  "name": "athlete-shared-theme",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/athlete/shared/theme/src",
+  "projectType": "library",
+  "tags": ["scope:athlete type:feature platform:mobile"],
+  "// targets": "to see all targets run: nx show project athlete-shared-theme --web",
+  "targets": {}
+}
