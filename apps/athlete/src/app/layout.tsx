@@ -1,3 +1,4 @@
+import { Footer, Header } from '@smart-gym/athlete/feature/shell';
 import './global.scss';
 import { StyledComponentsRegistry } from './registry';
 
@@ -14,7 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Header />
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <Footer />
       </body>
     </html>
   );
