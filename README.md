@@ -1,5 +1,3 @@
-# smart-gym
-=======
 # Create Nx workspace and athlete project 
 npx create-nx-workspace@latest --preset=next --pm pnpm
 or 
@@ -71,16 +69,11 @@ nx g @nx/react:setup-tailwind --project=athlete
 
 ## Create new library
 sample auth feature library for athlete:
-nx g @nx/react:library auth --directory=libs/athlete/feature --unitTestRunner=vitest --bundler=none scope:athlete,type:feature,platform:mobile
+nx g @nx/react:library auth --directory=libs/athlete/feature --unitTestRunner=vitest --bundler=none --tags=scope:athlete,type:feature,platform:mobile
 
-sample auth data-access library for athlete:
-nx g @nx/react:library home --directory=libs/athlete/data-access --unitTestRunner=vitest --bundler=none scope:athlete,type:data-access,platform:mobile
 
-sample auth feature library for gym:
-nx g @nx/react:library auth --directory=libs/gym/feature --unitTestRunner=vitest --bundler=none scope:gym,type:feature,platform:web
-
-sample auth feature library for admin
-nx g @nx/react:library auth --directory=libs/admin/feature --unitTestRunner=vitest --bundler=none scope:admin,type:feature,platform:web
+sample home data-access library for athlete:
+nx g @nx/react:library home --directory=libs/athlete/data-access --unitTestRunner=vitest --bundler=none --tags=scope:athlete,type:data-access,platform:mobile
 
 ## remove project or library
 nx g @nx/workspace:remove [lib-name] --forceRemove    
@@ -90,15 +83,6 @@ nx g @nx/react:setup-tailwind --project=<project name>
 sample for athlete
 nx g @nx/react:setup-tailwind --project=athlete
 pnpm add -D tailwindcss@latest postcss@latest autoprefixer@latest
-
-# Add project to github
-
-git init
-git checkout -b develop
-git add .
-git commit -m "Add project files on develop branch"
-git remote add origin https://github.com/Mirzagholi/smart-gym.git
-git push --set-upstream origin develop
 
 
 
@@ -176,4 +160,12 @@ It will show tasks that you can run with Nx.
 - [Follow us on Twitter](https://twitter.com/nxdevtools)
 
 
+# Add project to github
 
+git init
+git checkout -b develop
+git add .
+git commit -m "Add project files on develop branch"
+git remote add origin https://github.com/Mirzagholi/smart-gym.git
+git push --set-upstream origin develop
+*git pull origin develop --rebase

@@ -21,8 +21,18 @@
       "@smart-gym/athlete/data-access/home": [
         "libs/athlete/data-access/home/src/index.ts"
       ],
-      "@smart-gym/auth": ["libs/athlete/feature/auth/src/index.ts"],
-      "@smart-gym/home": ["libs/athlete/feature/home/src/index.ts"]
+      "@smart-gym/athlete/feature/auth": [
+        "libs/athlete/feature/auth/src/index.ts"
+      ],
+      "@smart-gym/athlete/feature/entries": [
+        "libs/athlete/feature/entries/src/index.ts"
+      ],
+      "@smart-gym/athlete/feature/home": [
+        "libs/athlete/feature/home/src/index.ts"
+      ],
+      "@smart-gym/athlete/shared/theme": [
+        "libs/athlete/shared/theme/src/*"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

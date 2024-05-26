@@ -1,4 +1,4 @@
-import './global.css';
+import './global.scss';
 import { StyledComponentsRegistry } from './registry';
 
 export const metadata = {
