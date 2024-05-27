@@ -5,6 +5,21 @@ export interface WorkoutProps {}
 export default function Auth(props: WorkoutProps) {
   return (
     <>
+      <header>
+        <div
+        className="flex gap-1 items-center h-32 absolute right-0 left-0">
+        <Image width={500} height={500} className="bg-smartgymprimary absolute right-0 left-0 z-0" src="/media/plan/tringle.svg" alt=""/>
+          <div className="flex gap-3 items-center justify-start ">
+            <div className="h-10 pt-3 mr-5 z-10">
+              <Image width={12} height={12}  src="/media/plan/right.svg" alt=""/>
+            </div>
+            <div className="flex gap-1 z-10">
+                <div className="text-pure-w text-lg mr-2">برنامه تمرینی</div>
+                <div className=" text-yellow text-lg"> بدنسازی</div>
+            </div>
+          </div>
+        </div> 
+    </header>
      
     <section>
         <div className="flex justify-between items-center rounded-t-3xl mt-24  h-24 bg-smartgymprimarydark absolute left-0 right-0 z-10">
