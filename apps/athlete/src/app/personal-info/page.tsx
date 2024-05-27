@@ -9,11 +9,12 @@ export default function Auth(props: InfoProps) {
        <div>
         <div
         className=" bg-secondary-blue flex items-center  h-32 fixed right-0 left-0 -z-0">
+          <Image width={500} height={500} className="bg-secondary-blue fixed right-0 left-0 z-0" src={'/media/form/tringle.svg'} alt=""/>
           <div className="flex gap-3 items-center justify-start ">
-            <div className="w-6 h-10 pt-3 mr-5">
+            <div className="w-6 h-10 pt-3 mr-5 z-10">
               <Image width={17} height={17}  src="/media/form/right.svg" alt=""/>
             </div>
-            <div className="text-pure-w text-lg mr-5">فرم اولیه</div>
+            <div className="text-pure-w text-lg mr-5 z-10">فرم اولیه</div>
           </div>
        
         </div>
