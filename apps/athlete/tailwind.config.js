@@ -20,6 +20,22 @@ module.exports = {
         'primary-600': 'var(--primary-600)',
         'primary-800': 'var(--primary-800)',
         'secondary-400': 'var(--secondary-400)',
+        
+        //temperory for nikoo
+        transparent: 'transparent',
+        current: 'currentColor',
+        'blue-dark' : '#1E3756',
+        'yellow' : '#E7FE58',
+        'white' : '#F0F3FF',
+        'light-blue' : '#6A7CBC',
+        'pure-w' : '#ffff',
+        'purple' : '#DDE4FE',
+        'border-color': '#cbd5e1',
+        'secondary-blue' : '#232441',
+        'second-bg' : '#1e3a8a',
+        'third3-ligh': '#52559F',
+        'smartgymprimary': "#232441",
+        'smartgymprimarydark': "#19192E",  
       },
       boxShadow: {
         '3xl': '0 -1px 20px  rgba(0, 0, 0, 0.2)',
