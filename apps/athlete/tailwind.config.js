@@ -1,14 +1,12 @@
+const {nextui} = require('@nextui-org/theme');
 const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
 const { join } = require('path');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    join(
-      __dirname,
-      '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'
-    ),
-    ...createGlobPatternsForDependencies(__dirname),
+    "join(\r\n      __dirname,\r\n      {src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}\r\n    ),\r\n    ...createGlobPatternsForDependencies(__dirname),",
+    "./node_modules/@nextui-org/theme/dist/components/(accordion|divider).js"
   ],
   theme: {
     extend: {
@@ -73,5 +71,5 @@ module.exports = {
 >>>>>>> 45069124d8ca06dfbb4bd2e4a903178bb3f945fc
     },
   },
-  plugins: [],
+  plugins: [nextui()],
 };

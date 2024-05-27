@@ -30,9 +30,10 @@
       "@smart-gym/athlete/feature/home": [
         "libs/athlete/feature/home/src/index.ts"
       ],
-      "@smart-gym/athlete/shared/theme": [
-        "libs/athlete/shared/theme/src/*"
-      ]
+      "@smart-gym/athlete/feature/shell": [
+        "libs/athlete/feature/shell/src/index.ts"
+      ],
+      "@smart-gym/athlete/shared/theme": ["libs/athlete/shared/theme/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
