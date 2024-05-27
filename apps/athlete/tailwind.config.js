@@ -41,7 +41,24 @@ module.exports = {
         '3xl': '0 -1px 20px  rgba(0, 0, 0, 0.2)',
         '4xl': '0px 4px 20px 0px rgba(0, 0, 0, 0.11)',
         '5xl': '0px 3px 20px 0px rgba(11, 77, 82, 0.18)'
-      }
+      },
+      // for morteza
+      
+      height:{
+        '278': '1112px',
+        '18': '74px',
+        '66': '264px',
+
+      },
+      width:{
+        '26': '98px',
+        '66': '264px',
+
+      },
+      borderRadius:{
+        '4xl':'36px'
+      },
+      
     },
   },
   plugins: [],
