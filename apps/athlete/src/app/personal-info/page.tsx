@@ -2,7 +2,7 @@ import Image from 'next/Image';
 /* eslint-disable-next-line */
 export interface InfoProps {}
 
-export default function Auth(props: InfoProps) {
+export default function Info(props: InfoProps) {
   return (
     <>
      <div>
