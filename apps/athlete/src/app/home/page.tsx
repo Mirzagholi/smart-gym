@@ -1,7 +1,11 @@
 // import { AthleteFeatureHome } from "@smart-gym/athlete/feature/home";
 // <AthleteFeatureHome></AthleteFeatureHome></h1>
+'use client';
 import { AthleteFeatureHome } from '@smart-gym/athlete/feature/home';
 import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
 
 /* eslint-disable-next-line */
 export interface HomeProps {}
@@ -78,82 +82,91 @@ export default function Home(props: HomeProps) {
           </div>
         </div>
 
-        <div className="mx-8 flex gap-4  ">
-          <div className="min-w-64 bg-primary-600 rounded-2xl py-5 px-4 flex justify-between ">
-            <div className="flex flex-col justify-between">
-              <h1 className="text-sm text-white font-medium">
-                کلاس یوگا 100 جلسه
-              </h1>
-              <div className="flex gap-2 items-center">
-                <div>
-                  <Image
-                    width="0"
-                    height="0"
-                    className="w-full h-auto"
-                    src="/media/home/border.svg"
-                    alt=""
-                  />
-                </div>
-                <div className="space-y-2">
-                  <p className="text-primary-300 text-xs">
-                    تاریخ شروع: <span className="text-white">1403/03/15</span>
-                  </p>
-                  <p className="text-primary-300 text-xs">
-                    تاریخ اتمام: <span className="text-white">1403/06/26</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div>
-              {' '}
-              <Image
-                width="0"
-                height="0"
-                className="w-full h-auto"
-                src="/media/home/water.svg"
-                alt=""
-              />
-            </div>
-          </div>
-          <div className="min-w-64 bg-primary-100 rounded-2xl py-5 px-4 flex justify-between ">
-            <div className="flex flex-col justify-between">
-              <h1 className="text-sm text-primary-600 font-medium">
-                بدنسازی 12 جلسه در ماه
-              </h1>
-              <div className="flex gap-2 items-center">
-                <div>
-                  <Image
-                    width="0"
-                    height="0"
-                    className="w-full h-auto"
-                    src="/media/home/border(1).svg"
-                    alt=""
-                  />
-                </div>
-                <div className="space-y-2">
-                  <p className="text-primary-500 text-xs">
-                    تاریخ شروع:{' '}
-                    <span className="text-primary-600">1403/03/15</span>
-                  </p>
-                  <p className="text-primary-500 text-xs">
-                    تاریخ اتمام:{' '}
-                    <span className="text-primary-600">1403/06/26</span>
-                  </p>
+        <Swiper
+          spaceBetween={1}
+          slidesPerView={1}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          <SwiperSlide>
+            <div className=" bg-primary-600 rounded-2xl py-5 px-4 flex justify-between ">
+              <div className="flex flex-col justify-between">
+                <h1 className="text-sm text-white font-medium">
+                  کلاس یوگا 100 جلسه
+                </h1>
+                <div className="flex gap-2 items-center">
+                  <div>
+                    <Image
+                      width="0"
+                      height="0"
+                      className="w-full h-auto"
+                      src="/media/home/border.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <p className="text-primary-300 text-xs">
+                      تاریخ شروع: <span className="text-white">1403/03/15</span>
+                    </p>
+                    <p className="text-primary-300 text-xs">
+                      تاریخ اتمام:{' '}
+                      <span className="text-white">1403/06/26</span>
+                    </p>
+                  </div>
                 </div>
               </div>
+              <div>
+                <Image
+                  width="0"
+                  height="0"
+                  className="w-full h-auto"
+                  src="/media/home/water.svg"
+                  alt=""
+                />
+              </div>
             </div>
-            <div>
-              {' '}
-              <Image
-                width="0"
-                height="0"
-                className="w-full h-auto"
-                src="/media/home/water.svg"
-                alt=""
-              />
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className=" bg-primary-100 rounded-2xl py-5 px-4 flex justify-between ">
+              <div className="flex flex-col justify-between">
+                <h1 className="text-sm text-primary-600 font-medium">
+                  بدنسازی 12 جلسه در ماه
+                </h1>
+                <div className="flex gap-2 items-center">
+                  <div>
+                    <Image
+                      width="0"
+                      height="0"
+                      className="w-full h-auto"
+                      src="/media/home/border(1).svg"
+                      alt=""
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <p className="text-primary-500 text-xs">
+                      تاریخ شروع:{' '}
+                      <span className="text-primary-600">1403/03/15</span>
+                    </p>
+                    <p className="text-primary-500 text-xs">
+                      تاریخ اتمام:{' '}
+                      <span className="text-primary-600">1403/06/26</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <Image
+                  width="0"
+                  height="0"
+                  className="w-full h-auto"
+                  src="/media/home/water.svg"
+                  alt=""
+                />
+              </div>
             </div>
-          </div>
-        </div>
+          </SwiperSlide>
+
+        </Swiper>
 
         <div className="m-8 grid grid-cols-3 gap-4">
           <div className="shadow-4xl bg-white rounded-2xl w-26 h-24 flex flex-col items-center justify-center  gap-2">
@@ -180,7 +193,6 @@ export default function Home(props: HomeProps) {
               />
             </div>
             <p className="text-xs font-medium text-primary-600">
-              {' '}
               خرید از فروشگاه
             </p>
           </div>
@@ -209,7 +221,6 @@ export default function Home(props: HomeProps) {
               />
             </div>
             <p className="text-xs font-medium text-primary-600">
-              {' '}
               مربیان باشگاه
             </p>
           </div>
@@ -225,7 +236,6 @@ export default function Home(props: HomeProps) {
               />
             </div>
             <p className="text-xs font-medium text-primary-600">
-              {' '}
               پیشرفت فیزیکی
             </p>
           </div>
@@ -253,62 +263,125 @@ export default function Home(props: HomeProps) {
             alt=""
           />
         </div>
+        <Swiper
+          spaceBetween={16}
+          slidesPerView={1}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          <SwiperSlide>
+            <div className="m-8 h-18  bg-white rounded-2xl shadow-5xl py-4 px-6">
+              <p className="text-xs leading-6 text-primary-600 ">
+                دوره جدید TRX مخصوص بانوان از تاریخ 1403/02/20 برگزار می گردد.
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="m-8 h-18  bg-white rounded-2xl shadow-5xl py-4 px-6">
+              <p className="text-xs leading-6 text-primary-600 ">
+                دوره جدید TRX مخصوص بانوان از تاریخ 1403/02/20 برگزار می گردد.
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="m-8 h-18  bg-white rounded-2xl shadow-5xl py-4 px-6">
+              <p className="text-xs leading-6 text-primary-600 ">
+                دوره جدید TRX مخصوص بانوان از تاریخ 1403/02/20 برگزار می گردد.
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="m-8 h-18  bg-white rounded-2xl shadow-5xl py-4 px-6">
+              <p className="text-xs leading-6 text-primary-600 ">
+                دوره جدید TRX مخصوص بانوان از تاریخ 1403/02/20 برگزار می گردد.
+              </p>
+            </div>
+          </SwiperSlide>
+        </Swiper>
 
-        <div className="m-8 h-18  bg-white rounded-2xl shadow-5xl py-4 px-6">
-          <p className="text-xs leading-6 text-primary-600 ">
-            دوره جدید TRX مخصوص بانوان از تاریخ 1403/02/20 برگزار می گردد.
-          </p>
-        </div>
+        <Swiper
+          spaceBetween={16}
+          slidesPerView={1.35}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          <SwiperSlide>
+            <div className=" h-72 rounded-2xl shadow-5xl p-4 space-y-3">
+              <Image
+                width="0"
+                height="0"
+                className="w-full h-auto"
+                src="/media/home/image.svg"
+                alt=""
+              />
 
-        <div className="mx-8 flex gap-4 mb-24">
-          <div className="min-w-64 h-72 rounded-2xl shadow-5xl p-4 space-y-3">
-            <Image
-              width="0"
-              height="0"
-              className="w-full h-auto"
-              src="/media/home/image.svg"
-              alt=""
-            />
+              <p className="text-sm font-semibold text-primary-600">
+                تاثیر ورزش بر تناسب و سلامتی بدن
+              </p>
+              <p className="text-xs text-primary-300 leading-6">
+                اثر ورزش بر بدن شامل افزایش آرامش،کاهش استرس و بهبود خواب و
+                روحیه بهتر،عملکرد ایمن
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className=" h-72 rounded-2xl shadow-5xl p-4 space-y-3">
+              <Image
+                width="0"
+                height="0"
+                className="w-full h-auto"
+                src="/media/home/image.svg"
+                alt=""
+              />
 
-            <p className="text-sm font-semibold text-primary-600">
-              تاثیر ورزش بر تناسب و سلامتی بدن
-            </p>
-            <p className="text-xs text-primary-300 leading-6">
-              اثر ورزش بر بدن شامل افزایش آرامش،کاهش استرس و بهبود خواب و روحیه
-              بهتر،عملکرد ایمن
-            </p>
-          </div>
-          <div className="min-w-64 h-72 rounded-2xl shadow-5xl p-4 space-y-3 relative">
-            <Image
-              fill
-              src="/media/home/27083 1.svg"
-              alt=""
-            />
-            <p className="text-sm font-semibold text-primary-600">
-              تاثیر ورزش بر تناسب و سلامتی بدن
-            </p>
-            <p className="text-xs text-primary-300 leading-6">
-              اثر ورزش بر بدن شامل افزایش آرامش،کاهش استرس و بهبود خواب و روحیه
-              بهتر،عملکرد ایمن
-            </p>
-          </div>
-          <div className="min-w-64 h-72 rounded-2xl shadow-5xl p-4 space-y-3">
-            <Image
-              width="0"
-              height="0"
-              className="w-full h-auto"
-              src="/media/home/image.svg"
-              alt=""
-            />
-            <p className="text-sm font-semibold text-primary-600">
-              تاثیر ورزش بر تناسب و سلامتی بدن
-            </p>
-            <p className="text-xs text-primary-300 leading-6">
-              اثر ورزش بر بدن شامل افزایش آرامش،کاهش استرس و بهبود خواب و روحیه
-              بهتر،عملکرد ایمن
-            </p>
-          </div>
-        </div>
+              <p className="text-sm font-semibold text-primary-600">
+                تاثیر ورزش بر تناسب و سلامتی بدن
+              </p>
+              <p className="text-xs text-primary-300 leading-6">
+                اثر ورزش بر بدن شامل افزایش آرامش،کاهش استرس و بهبود خواب و
+                روحیه بهتر،عملکرد ایمن
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className=" h-72 rounded-2xl shadow-5xl p-4 space-y-3">
+              <Image
+                width="0"
+                height="0"
+                className="w-full h-auto"
+                src="/media/home/image.svg"
+                alt=""
+              />
+
+              <p className="text-sm font-semibold text-primary-600">
+                تاثیر ورزش بر تناسب و سلامتی بدن
+              </p>
+              <p className="text-xs text-primary-300 leading-6">
+                اثر ورزش بر بدن شامل افزایش آرامش،کاهش استرس و بهبود خواب و
+                روحیه بهتر،عملکرد ایمن
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className=" h-72 rounded-2xl shadow-5xl p-4 space-y-3">
+              <Image
+                width="0"
+                height="0"
+                className="w-full h-auto"
+                src="/media/home/image.svg"
+                alt=""
+              />
+
+              <p className="text-sm font-semibold text-primary-600">
+                تاثیر ورزش بر تناسب و سلامتی بدن
+              </p>
+              <p className="text-xs text-primary-300 leading-6">
+                اثر ورزش بر بدن شامل افزایش آرامش،کاهش استرس و بهبود خواب و
+                روحیه بهتر،عملکرد ایمن
+              </p>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </section>
 
       <footer className="bg-white fixed bottom-0  shadow-3xl w-full py-2 right-0 z-20">
