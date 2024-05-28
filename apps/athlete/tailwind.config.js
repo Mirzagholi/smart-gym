@@ -1,12 +1,14 @@
-const {nextui} = require('@nextui-org/theme');
 const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
 const { join } = require('path');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "join(\r\n      __dirname,\r\n      {src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}\r\n    ),\r\n    ...createGlobPatternsForDependencies(__dirname),",
-    "./node_modules/@nextui-org/theme/dist/components/(accordion|divider).js"
+    join(
+      __dirname,
+      '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'
+    ),
+    ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
     extend: {
@@ -19,6 +21,7 @@ module.exports = {
         'primary-800': 'var(--primary-800)',
         'secondary-400': 'var(--secondary-400)',
 
+        //temperory for nikoo
         //temperory for nikoo
         transparent: 'transparent',
         current: 'currentColor',
@@ -45,31 +48,22 @@ module.exports = {
       boxShadow: {
         '3xl': '0 -1px 20px  rgba(0, 0, 0, 0.2)',
         '4xl': '0px 4px 20px 0px rgba(0, 0, 0, 0.11)',
-<<<<<<< HEAD
         '5xl': '0px 3px 20px 0px rgba(11, 77, 82, 0.18)'
       },
-      // for morteza
-      
-      height:{
+      height: {
         '278': '1112px',
         '18': '74px',
         '66': '264px',
 
       },
-      width:{
+      width: {
         '26': '98px',
         '66': '264px',
-
       },
-      borderRadius:{
-        '4xl':'36px'
+      borderRadius: {
+        '4xl': '36px'
       },
-      
-=======
-        '5xl': '0px 3px 20px 0px rgba(11, 77, 82, 0.18)',
-      },
->>>>>>> 45069124d8ca06dfbb4bd2e4a903178bb3f945fc
     },
   },
-  plugins: [nextui()],
+  plugins: [],
 };
